@@ -1,0 +1,10 @@
+[http]
+listen=":8080"
+
+[log]
+path="logs"
+debug=false
+stdprint=true
+routeprint=false
+error=true
+access=false
