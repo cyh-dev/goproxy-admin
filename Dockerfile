@@ -1,5 +1,8 @@
 FROM centos:7
 
+ENV TZ Asia/Shanghai
+RUN ln -fs /usr/share/zoneinfo/${TZ} /etc/localtime && echo ${TZ} > /etc/timezone
+
 RUN mkdir -p /data/proxy-admin
 WORKDIR /data/proxy-admin
 
