@@ -7,8 +7,7 @@ RUN mkdir -p /data/proxy-admin
 WORKDIR /data/proxy-admin
 
 COPY ./ ./
-RUN ./proxy-admin install
-RUN mv /etc/gpa/app.toml /etc/gpa/app.toml.bak
+RUN mkdir -p /etc/gpa
 RUN cp app.toml /etc/gpa/app.toml
 
 CMD ["./proxy-admin"]
